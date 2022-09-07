@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+    --lightCyan: hsl(193, 38%, 86%);
+    --neonGreen: hsl(150, 100%, 66%);
+    --grayishBlue: hsl(217, 19%, 38%);
+    --darkGrayishBlue: hsl(217, 19%, 24%);
+    --darkBlue: hsl(218, 23%, 16%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope';
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--darkBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div#advice-box{
+    position: relative;
+    background-color: var(--darkGrayishBlue);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    text-align: center;
+    width: 500px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .1);
+}
+
+p#title{
+    color: var(--neonGreen);
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 3px;
+}
+
+p#advice{
+    color: var(--lightCyan);
+    font-size: 28px;
+    margin: 40px 0;
+    width: 100%;
+}
+
+img#divider{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+div#dice-box{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--neonGreen);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    cursor: pointer;
+}
+
+div#dice-box:hover{
+    box-shadow: 0 0 15px 5px var(--neonGreen);
+}
+
+@media screen and (max-width: 550px) {
+    div#advice-box{
+        width: 400px;
+        padding: 40px;
+    }
+
+    p#advice{
+        font-size: 25px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    div#advice-box{
+        width: 300px;
+        padding: 20px;
+    }
+
+    p#advice{
+        font-size: 20px;
+    }
+
+    div#dice-box{
+        padding: 10px;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    div#advice-box{
+        width: 280px;
+        padding: 20px 10px;
+    }
+
+    p#advice{
+        font-size: 18px;
+    }
+
+    p#title{
+        font-size: 12px;
+    }
+}
